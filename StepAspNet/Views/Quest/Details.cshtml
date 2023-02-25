@@ -1,0 +1,131 @@
+﻿@model StepAspNet.Models.Quest
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div style="background-color:#000000; padding:20px; color:#ffffff">
+    <h2>@Model.Title Quest Details</h2>
+    <div>
+        <img src="@Model.LogoImg" />
+    </div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TeamNum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TeamNum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlayerAge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlayerAge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Company)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Company)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Raiting)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Raiting)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FearLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FearLevel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DifficultyLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DifficultyLevel)
+        </dd>
+    </dl>
+    <p>
+        @Html.ActionLink("Back to List", "Index", new { }, new {@class="btn"})
+    </p>
+</div>
+
+
+<style>
+    h2 {
+        color: #850d0d;
+        font-weight: bolder;
+        font-size: 50px;
+        font-family: Roboto,'Source Sans Pro',Helvetica,Arial,sans-serif;
+    }
+
+    img {
+        width: 600px;
+        height: 300px;
+    }
+
+    dd, dt,p {
+        font-family: Roboto,'Source Sans Pro',Helvetica,Arial,sans-serif;
+        font-size: 20px;
+    }
+    .btn {
+        padding: 7px;
+        border-color: #fdbe2b;
+        background-color: #fdbe2b;
+        color: #000000
+    }
+</style>
