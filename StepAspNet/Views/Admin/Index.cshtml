@@ -1,0 +1,79 @@
+﻿@model IEnumerable<StepAspNet.Models.Quest>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container" style="background-color:#000000">
+    <p>
+        @Html.ActionLink("Create New", "Create", new { }, new { @class = "btn" })
+    </p>
+    @foreach (var item in Model)
+    {
+        <div class="element col-lg-12">
+            <h1>@item.Title</h1>
+            <div>
+                <img src="@item.LogoImg" />
+            </div>
+            <h3 aria-level="3">@item.Description</h3>
+            <table class="table" style="border-color:#000000">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Duration)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TeamNum)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PlayerAge)
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Duration)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TeamNum)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PlayerAge)
+                    </td>
+                </tr>
+            </table>
+            <div class="btn-block">
+                @Html.ActionLink("MORE INFO", "Details", new { id = item.Id }, new { @class = "btn" })
+                @Html.ActionLink("EDIT", "Edit", new { id = item.Id }, new { @class = "btn" })
+                @Html.ActionLink("DELETE", "Delete", new { id = item.Id }, new { @class = "btn" })
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    .btn {
+        padding: 7px;
+        border-color: #fdbe2b;
+        background-color: #fdbe2b;
+        color: #000000;
+        background-color:
+    }
+
+    .element {
+        padding: 10px;
+        border-top: 2px solid #808080;
+        color: #ffffff;
+        font-family: Roboto,'Source Sans Pro',Helvetica,Arial,sans-serif;
+    }
+
+    h1 {
+        color: #850d0d;
+        font-weight: bolder;
+        font-size: 80px;
+        font-family: Roboto,'Source Sans Pro',Helvetica,Arial,sans-serif;
+    }
+
+    img {
+        width: 600px;
+        height: 300px;
+    }
+</style>
